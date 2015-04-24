@@ -1,11 +1,11 @@
 # Settings for the app
 app:
   # HTML Title
-  title: VTA Mobility Map
+  title: Mobility Map
   # Header name
-  name: VTA Mobility Map
+  name: Mobility Map
   # Meta description that will show up in Google search results
-  meta_description: _(Shareabouts is a mapping tool to gather crowd sourced public input. Use it to collect suggested locations and comments in a social, engaging process.)
+  meta_description: _(Mobility Map is a crowd sourcing tool used to engage the public directly with transit authorities)
   # Meta author that will show up in Google search results
   meta_author: OpenPlans.org
 
@@ -276,7 +276,7 @@ pages:
 
   - title: _(More...)
     pages:
-      - title: _(Why Shareabouts?)
+      - title: _(Why Mobility Map?)
         slug: why
         url: /static/pages/why.html
 
