@@ -403,7 +403,7 @@ place:
           value: bridge
         - label: _(Parking)
           value: parking
-      name: hint_type
+      name: location_type
       attrs:
         - key: required
     - prompt: _(Details)
