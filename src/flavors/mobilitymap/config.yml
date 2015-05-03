@@ -392,7 +392,7 @@ place:
         - label: _(Bike Path)
           value: bike_path
         - label: _(Side Walk)
-          value: sidewalk
+          value: side_walk
         - label: _(Trail)
           value: trail
         - label: _(Street)
