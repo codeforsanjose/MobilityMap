@@ -50,11 +50,16 @@ map:
 # The keys show up in the dropdown list when you are adding a new place
 # The values map the place type to map icons (defined below).
 place_types:
-  landmark:
-    label: _(Landmark)
+  bike_path:
+    label: _(Bike Path)
     rules:
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        # Display landmarks as circles (vectors) when zoomed out
+      - condition: '"{{location_type}}" === "bike_path" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
 
         style:
           color: '#0d85e9'
@@ -63,7 +68,7 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "landmark" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "bike_path" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
@@ -71,7 +76,7 @@ place_types:
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "landmark" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
@@ -81,76 +86,253 @@ place_types:
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
 
-  park:
-    label: _(Park)
+  side_walk:
+    label: _(Side Walk)
     rules:
-      - condition: '"{{location_type}}" === "park" && {{layer.focused}}'
-        # Show parks that are points as icons...
+      - condition: '"{{location_type}}" === "side_walk" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "side_walk" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-4bbd45.png
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "side_walk" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
 
-        # ...and parks that are polygons as shapes.
+  trail:
+    label: _(Trail)
+    rules:
+      - condition: '"{{location_type}}" === "trail" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
 
         style:
-          color: '#4bbd45'
-          weight: 3
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
           opacity: 0.9
-          fillOpacity: 0.7
+          fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "park"'
-        # Show parks that are points as icons...
+      - condition: '"{{location_type}}" === "bike_path" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-4bbd45.png
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
-        # ...and parks that are polygons as shapes.
+      - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
 
-        style:
-          color: '#4bbd45'
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 0.4
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
 
-  school:
-    label: _(School)
+
+  train:
+    label: _(Train)
     rules:
-      - condition: '"{{location_type}}" === "school" && {{submission_sets.comments.length}} > 0'
-        # Display schools as circles
-
+      - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#f95016'
-          radius: 8
-          weight: 4
-          opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
-          weight: 4
-          opacity: 0.9
-          fillOpacity: 0.4
-
-      - condition: '"{{location_type}}" === "school"'
-        style:
-          color: '#f95016'
-          radius: 8
+          color: '#0d85e9'
+          radius: 3
           weight: 1
           opacity: 0.9
-          fillOpacity: 0.4
-        focus_style:
-          color: '#f95016'
-          radius: 16
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
           weight: 1
           opacity: 0.9
-          fillOpacity: 0.4
+          fillOpacity: 1
 
+      - condition: '"{{location_type}}" === "bike_path" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  street:
+    label: _(Street)
+    rules:
+      - condition: '"{{location_type}}" === "street" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "street" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "street" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  highway:
+    label: _(Highway)
+    rules:
+      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "highway" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  bridge:
+    label: _(Bridge)
+    rules:
+      - condition: '"{{location_type}}" === "bridge" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "bridge" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "bridge" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+  parking:
+    label: _(Parking)
+    rules:
+      - condition: '"{{location_type}}" === "parking" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "parking" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconSize: [17, 18]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "parking" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          shadowUrl: /static/css/images/marker-shadow.png
+          iconSize: [25, 41]
+          shadowSize: [41, 41]
+          iconAnchor: [12, 41]
+
+        # Display landmarks as circles (vectors) when zoomed out
 
 activity:
   # Optional. Activity is supported by default. Set to false to disable.
@@ -160,12 +342,12 @@ activity:
 
 place:
   adding_supported: true
-  add_button_label: _(Add a Place)
+  add_button_label: _(Add a Hint)
   # Labels for the buttons that toggle the map and list views
-  show_list_button_label: _(List All Places)
+  show_list_button_label: _(List All Hints)
   show_map_button_label: _(Show the Map)
   action_text: _(added)
-  title: _(Tell us more...)
+  title: _(Give us a Hint!)
   action_text: _(created)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
@@ -193,36 +375,44 @@ place:
           value: _(Email address)
         - key: size
           value: 30
-    - prompt: _(Location Name)
+    - prompt: _(Hint Name)
       type: text
       name: name
       optional: true
       attrs:
         - key: placeholder
-          value: _(Location Name)
+          value: _(Hint Name)
         - key: size
           value: 30
-    - prompt: _(Location Type)
+    - prompt: _(Hint Type)
       type: select
       options:
         - label: _(Choose One)
           value: ''
-        - label: _(Landmark)
-          value: landmark
-        - label: _(Park)
-          value: park
-        - label: _(School)
-          value: school
+        - label: _(Bike Path)
+          value: bike_path
+        - label: _(Side Walk)
+          value: side_walk
+        - label: _(Trail)
+          value: trail
+        - label: _(Street)
+          value: street
+        - label: _(Highway)
+          value: highway
+        - label: _(Bridge)
+          value: bridge
+        - label: _(Parking)
+          value: parking
       name: location_type
       attrs:
         - key: required
-    - prompt: _(Description)
-      type: textarea
+    - prompt: _(Details)
+      type: text
       name: description
       optional: true
       attrs:
         - key: placeholder
-          value: _(Description...)
+          value: _(Details Here...)
     - prompt: _(Image)
       inputfile_label: _(Add an Image)
       type: file
