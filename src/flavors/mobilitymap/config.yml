@@ -406,6 +406,20 @@ place:
       name: location_type
       attrs:
         - key: required
+    - prompt: _(Hint Category)
+      type: select
+      options:
+        - label: _(Choose One)
+          value: ''
+        - label: _(Hazard)
+          value: hazard
+        - label: _(Improvement)
+          value: improvement
+        - label: _(Construction)
+          value: construction
+      name: hint_category
+      attrs:
+        - key: required
     - prompt: _(Details)
       type: text
       name: description
