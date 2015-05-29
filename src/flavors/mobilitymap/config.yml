@@ -348,7 +348,7 @@ place:
   show_map_button_label: _(Show the Map)
   action_text: _(added)
   title: _(Give us a Hint!)
-  action_text: _(created)
+  action_text: _(added)
   anonymous_name: _(Someone)
   submit_button_label: _(Submit)
 
