@@ -472,6 +472,14 @@ support:
   action_text: supported
   anonymous_name: _(Someone)
 
+answer:
+  submission_type: answer
+  submit_btn_text: _(Answered)
+  response_name: _(answered)
+  response_plural_name: _(answered)
+  action_text: answered
+  anonymous_name: _(Someone)
+
 pages:
   - title: _(About)
     slug: about

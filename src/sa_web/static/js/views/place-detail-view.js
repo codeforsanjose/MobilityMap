@@ -9,6 +9,7 @@ var Shareabouts = Shareabouts || {};
 
       this.surveyType = this.options.surveyConfig.submission_type;
       this.supportType = this.options.supportConfig.submission_type;
+      this.answerType = this.options.answerConfig.submission_type;
 
       this.model.on('change', this.onChange, this);
 
@@ -25,6 +26,12 @@ var Shareabouts = Shareabouts || {};
           placeModel: this.model
         });
 
+      this.model.submissionSets[this.answerType] = this.model.submissionSets[this.answerType] ||
+        new S.SubmissionCollection(null, {
+          submissionType: this.answerType,
+          placeModel: this.model
+        });
+
 
       this.surveyView = new S.SurveyView({
         collection: this.model.submissionSets[this.surveyType],
@@ -35,6 +42,12 @@ var Shareabouts = Shareabouts || {};
       this.supportView = new S.SupportView({
         collection: this.model.submissionSets[this.supportType],
         supportConfig: this.options.supportConfig,
+        userToken: this.options.userToken
+      });
+
+      this.answerView = new S.AnswerView({
+        collection: this.model.submissionSets[this.answerType],
+        answerConfig: this.options.answerConfig,
         userToken: this.options.userToken
       });
 
@@ -70,6 +83,10 @@ var Shareabouts = Shareabouts || {};
       this.$('.support').html(this.supportView.render().$el);
       // Fetch for submissions and automatically update the element
       this.model.submissionSets[this.supportType].fetchAllPages();
+
+      this.$('.answer').html(this.answerView.render().$el);
+      // Fetch for submissions and automatically update the element
+      this.model.submissionSets[this.answerType].fetchAllPages();
 
       return this;
     },

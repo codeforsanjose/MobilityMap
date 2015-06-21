@@ -120,6 +120,7 @@ var Shareabouts = Shareabouts || {};
           placeTypes: this.options.placeTypes,
           surveyConfig: this.options.surveyConfig,
           supportConfig: this.options.supportConfig,
+          answerConfig: this.options.answerConfig,
           placeConfig: this.options.placeConfig,
           // How often to check for new content
           interval: this.options.activityConfig.interval || 30000
@@ -382,6 +383,7 @@ var Shareabouts = Shareabouts || {};
           model: model,
           surveyConfig: this.options.surveyConfig,
           supportConfig: this.options.supportConfig,
+          answerConfig: this.options.answerConfig,
           placeConfig: this.options.placeConfig,
           placeTypes: this.options.placeTypes,
           userToken: this.options.userToken

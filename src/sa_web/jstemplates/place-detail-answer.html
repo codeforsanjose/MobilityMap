@@ -1,0 +1,6 @@
+    <form action="#" method="post" class="btn btn-block btn-small user-answered">
+      <input type="hidden" name="user_token" value="{{{ user_token }}}">
+      <input type="hidden" name="visible" value="true">
+      <input type="checkbox" id="answer"{{# is_answering }} checked="checked"{{/ is_answering }}>
+      <label for="answer"><span class="answer-count">{{#if count }}{{ count }}{{else}}0{{/if }}</span> {{ answer_config.submit_btn_text }}</label>
+    </form>

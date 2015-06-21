@@ -54,6 +54,7 @@ var Shareabouts = Shareabouts || {};
         placeTypes: options.placeTypes,
         surveyConfig: options.surveyConfig,
         supportConfig: options.supportConfig,
+        answerConfig: options.answerConfig,
         pagesConfig: options.pagesConfig,
         mapConfig: options.mapConfig,
         placeConfig: options.placeConfig,

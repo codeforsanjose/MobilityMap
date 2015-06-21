@@ -207,6 +207,7 @@
   <script src="{{STATIC_URL}}js/views/auth-nav-view.js"></script>
   <script src="{{STATIC_URL}}js/views/activity-view.js"></script>
   <script src="{{STATIC_URL}}js/views/app-view.js"></script>
+  <script src="{{STATIC_URL}}js/views/answer-view.js"></script>
   <script src="{{STATIC_URL}}js/views/layer-view.js"></script>
   <script src="{{STATIC_URL}}js/views/map-view.js"></script>
   <script src="{{STATIC_URL}}js/views/support-view.js"></script>
@@ -241,6 +242,7 @@
       placeTypes: {{ config.place_types|as_json }},
       survey:     {{ config.survey|as_json }},
       support:    {{ config.support|as_json }},
+      answer:     {{ config.answer|as_json }},
       map:        {{ config.map|as_json }},
       activity:   {{ config.activity|as_json }},
       pages:      {{ pages_config_json|safe }}
@@ -259,6 +261,7 @@
         placeTypes: S.Config.placeTypes,
         surveyConfig: S.Config.survey,
         supportConfig: S.Config.support,
+        answerConfig: S.Config.answer,
         mapConfig: S.Config.map,
         activityConfig: S.Config.activity,
         pagesConfig: S.Config.pages

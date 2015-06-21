@@ -25,6 +25,7 @@ Shareabouts.SpecConfig = {
     "submission_type": "comments"
   },
   supportConfig: {"submit_btn_text": "Support This!", "action_text": "supported", "submission_type": "support"},
+  answerConfig: {"submit_btn_text": "This is Answered!", "action_text": "answered", "submission_type": "answer"},
   pagesConfig: [
     {"content": "<h1>About</h1><p>Hello! You're looking at a demo of Shareabouts.", "start_page": true, "slug": "about", "title": "About"},
     {"content": "<h1>What is Shareabouts for?</h1><p>Some ways you can use Shareabouts:</p>", "slug": "features", "title": "Features"}

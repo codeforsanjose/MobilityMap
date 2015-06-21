@@ -26,6 +26,7 @@ src_files:
   - static/js/views/pages-nav-view.js
   - static/js/views/activity-view.js
   - static/js/views/app-view.js
+  - static/js/views/answer-view.js
   - static/js/views/layer-view.js
   - static/js/views/map-view.js
   - static/js/views/support-view.js

@@ -20,6 +20,7 @@ describe('activity-view.js', function() {
         placeTypes: {},
         surveyConfig: {},
         supportConfig: {},
+        answerConfig: {},
         placeConfig: {},
 
         interval: 30000
