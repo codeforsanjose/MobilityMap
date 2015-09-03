@@ -56,6 +56,20 @@
               </select>
               {{/is_select}}
 
+
+<!-- ICON SELECT -->
+              {{#is_icon_select}}
+             <div id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+                {{#select_item_value ../.. name}}
+                {{# options }}
+                  {{#if label}}
+                  <img src='/static/img/{{label}}.png'>
+                  {{/if}}
+                {{/ options }}
+                {{/select_item_value}}
+              </div>
+              {{/is_icon_select}}
+
               {{#is_file}}
               <!--[if lt IE 10 ]><br>Sorry, your browser isn't compatible with our file upload method.<![endif]-->
               <!--[if (gt IE 9)|!(IE)]><!-->
