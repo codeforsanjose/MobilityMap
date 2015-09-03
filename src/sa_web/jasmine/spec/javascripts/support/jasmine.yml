@@ -33,6 +33,7 @@ src_files:
   - static/js/views/place-detail-view.js
   - static/js/views/place-form-view.js
   - static/js/routes.js
+  - static/js/icon_select.js
 
 # stylesheets
 #

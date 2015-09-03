@@ -36,7 +36,7 @@ map:
     maxZoom: 17
   layers:
     - url: http://{s}.tiles.mapbox.com/v4/mobilitymap.n5nf79a1/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibW9iaWxpdHltYXAiLCJhIjoiYjYyNTk3OGE5MmFjMjYxMmNmYjZiMDkyZTgwNDk1ODYifQ.XSuF8t5aJi9l_iAZHgnMtA
-      attribution: '&copy; OpenBusMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>. Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">.'
+      attribution: '&copy; OpenStreetMap contributors, CC-BY-SA. <a href="http://mapbox.com/about/maps" target="_blank">Terms &amp; Feedback</a>. Geocoding Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">.'
     - url: /static/data/philadelphia.geojson
       type: json
       rules:
@@ -332,252 +332,6 @@ place_types:
           shadowSize: [41, 41]
           iconAnchor: [12, 41]
 
-  bicycle:
-    label: _(Bicycle)
-    rules:
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  pedestrian:
-    label: _(Pedestrian)
-    rules:
-      - condition: '"{{location_type}}" === "pedestrian" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "pedestrian" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "pedestrian" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  rail:
-    label: _(Rail)
-    rules:
-      - condition: '"{{location_type}}" === "rail" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  bus:
-    label: _(Bus)
-    rules:
-      - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-
-  car:
-    label: _(Car)
-    rules:
-      - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  motorcycle:
-    label: _(Motorcycle)
-    rules:
-      - condition: '"{{location_type}}" === "bus" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bus" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bus" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  airplane:
-    label: _(Airplane)
-    rules:
-      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "highway" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
         # Display landmarks as circles (vectors) when zoomed out
 
 activity:
@@ -631,38 +385,38 @@ place:
         - key: size
           value: 30
     - prompt: _(Hint Type)
-      type: icon_select
+      type: select
       options:
-        - label: _(Bicycle)
-          value: bicycle
-        - label: _(Pedestrian)
-          value: pedestrian
-        - label: _(Rail)
-          value: rail
-        - label: _(Bus)
-          value: bus
-        - label: _(Car)
-          value: car
-        - label: _(Motorcycle)
-          value: motorcycle
-        - label: _(Airplane)
-          value: airplane
-        - label: _(Truck)
-          value: truck
-      name: hint_type
+        - label: _(Choose One)
+          value: ''
+        - label: _(Bike Path)
+          value: bike_path
+        - label: _(Side Walk)
+          value: side_walk
+        - label: _(Trail)
+          value: trail
+        - label: _(Street)
+          value: street
+        - label: _(Highway)
+          value: highway
+        - label: _(Bridge)
+          value: bridge
+        - label: _(Parking)
+          value: parking
+      name: location_type
       attrs:
         - key: required
     - prompt: _(Hint Category)
-      type: icon_select
+      type: select
       options:
+        - label: _(Choose One)
+          value: ''
         - label: _(Hazard)
           value: hazard
-        - label: _(Idea)
-          value: idea
+        - label: _(Improvement)
+          value: improvement
         - label: _(Construction)
           value: construction
-        - label: _(Accessibility)
-          value: accessibility 
       name: hint_category
       attrs:
         - key: required

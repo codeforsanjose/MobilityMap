@@ -1,3 +1,4 @@
 $('document').ready(function(){
-console.log('icon_select is here!')
+  WHAT_IS_UP = 'hello'
+  console.log('icon_select is here!')
 })

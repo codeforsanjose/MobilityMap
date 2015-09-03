@@ -59,11 +59,12 @@
 
 <!-- ICON SELECT -->
               {{#is_icon_select}}
-             <div id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+              <div id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
                 {{#select_item_value ../.. name}}
                 {{# options }}
                   {{#if label}}
-                  <img src='/static/img/{{label}}.png'>
+                  <img src='/static/img/{{ label }}.png'>
+                  <input id="place-{{ label }}" name="{{ label }}" type='checkbox' value='{{ label }}' class='icon_select' />
                   {{/if}}
                 {{/ options }}
                 {{/select_item_value}}
