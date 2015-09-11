@@ -4,7 +4,15 @@
  * NOTE: "With great power comes great responsibility."
  */
 
+/* colors 
 
+dark gray 271B2F
+purple 553854
+blue dark 276560
+green 6A8B76
+beige D8CDAD
+
+*/
 /* =Header
 -------------------------------------------------------------- */
 
@@ -19,4 +27,41 @@
 }
 
 @media only screen and (min-width: 1300px) {
+}
+
+#site-header,
+#ticker,
+#colophon,
+input.geocode-address-field,
+#geocode-address-bar {
+	background-color: #271B2F;
+} 
+#site-title {
+	font-family: Arial, Helvetica, serif;
+}
+
+input.geocode-address-bar {
+	color: white;
+}
+
+.btn-block, .btn-block:visited, .btn-block:link, .btn-block:hover {
+	background: #553854;
+	color: white;
+}
+
+.list-toggle-btn, 
+.list-toggle-btn:visited, 
+.list-toggle-btn:link,
+.list-toggle-btn:hover,
+.btn-primary, .btn-primary:visited, .btn-primary:link, .btn-primary:hover,
+.btn, .btn:visited, .btn:link, .btn:hover {
+	background: #276560;
+	color: white;
+}
+
+.user-support label {
+	color: white;
+}
+.user-support:hover label {
+	background-color: transparent;
 }
