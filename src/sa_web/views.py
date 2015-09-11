@@ -24,6 +24,8 @@ log = logging.getLogger(__name__)
 
 
 def make_api_root(dataset_root):
+    if settings.SHAREABOUTS['API_ROOT']:
+      return settings.SHAREABOUTS['API_ROOT']
     components = dataset_root.split('/')
     if dataset_root.endswith('/'):
         return '/'.join(components[:-4]) + '/'
