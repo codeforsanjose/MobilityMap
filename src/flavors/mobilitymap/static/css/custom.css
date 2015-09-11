@@ -4,7 +4,15 @@
  * NOTE: "With great power comes great responsibility."
  */
 
+/* colors 
 
+dark gray 271B2F
+purple 553854
+blue dark 276560
+green 6A8B76
+beige D8CDAD
+
+*/
 /* =Header
 -------------------------------------------------------------- */
 
@@ -19,4 +27,14 @@
 }
 
 @media only screen and (min-width: 1300px) {
+}
+
+#site-header,
+#ticker,
+#colophon,
+input.geocode-address-field {
+	background-color: #271B2F;
+}
+#site-title {
+	font-family: Arial, Helvetica, serif;
 }
