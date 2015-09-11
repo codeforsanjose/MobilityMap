@@ -16,9 +16,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # information for the flavor.
 
 SHAREABOUTS = {
-  'FLAVOR': 'defaultflavor',
-  'DATASET_ROOT': 'http://data.shareabouts.org/api/v2/demo-user/datasets/demo-data/',
-  'DATASET_KEY': 'NTNhODE3Y2IzODlmZGZjMWU4NmU3NDhj',
+  'FLAVOR': 'mobilitymap',
+  'DATASET_ROOT': 'http://api.mobilitymap.org/api/v2/admin/datasets/mobilitymap/',
+  'DATASET_KEY': '', #include this!
+  'API_ROOT': 'http://api.mobilitymap.org/api/v2/',
 }
 
 # For geocoding...
@@ -29,7 +30,7 @@ MAPQUEST_KEY = 'Fmjtd%7Cluur2g0bnl%2C25%3Do5-9at29u'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'shareabouts-old',
+        'NAME': 'shareabouts-v2',
         'USER': 'postgres',
         'PASSWORD': 'postgres',
         'HOST': 'localhost',
