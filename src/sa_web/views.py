@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 
 def make_api_root(dataset_root):
-    if settings.SHAREABOUTS['API_ROOT']:
+    if 'API_ROOT' in settings.SHAREABOUTS:
       return settings.SHAREABOUTS['API_ROOT']
     # The following code doesn't work how it's supposed to,
     #  not unless it is reaching into the localhost for 
