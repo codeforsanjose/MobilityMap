@@ -2,6 +2,7 @@
 
         <header class="place-header clearfix">
           <h1>{{#if name }}{{ name }}{{^}}{{>location-string location }}{{/if}}</h1>
+  
           <span class="place-submission-details">
             {{#_}}<strong class="point-submitter">
               {{#if submitter.avatar_url }}
@@ -18,8 +19,8 @@
                   {{ anonymous_name }}
                 {{/if}}
               {{/if}}
-            </strong> {{ action_text }} this hint for {{ place_type_label location_type}}
-
+            </strong> 
+            <br/>{{ action_text }} a hint for {{ place_type_label location_type}}s<br/>
             {{#if region}}
               in {{ region }}
             {{/if}}{{/_}}
@@ -35,18 +36,25 @@
           </span>
         </header>
 
+           <img src='{{STATIC_URL}}img/{{ location_type }}.png' class='icon_small'> <img src='{{STATIC_URL}}img/{{ hint_category }}.png' class='icon_small'>
         <section class="place-items">
           {{# attachments }}
           <div class="place-item place-item-attachment place-attachment-{{ name }}">
             <img src="{{ file }}" class="place-value place-value-{{ name }}" alt="{{ name }}">
           </div>
           {{/ attachments }}
-          {{#each_place_item "submitter_name" "name" "location_type"}}
+<!--
+          {{#each_place_item "submitter_name" "name" "location_type"}} 
           <div class="place-item place-item-{{ name }}">
             <span class="place-label place-label-{{ name }}">{{ label }}</span>
             <p class="place-value place-value-{{ name }}">{{nlToBr value }}</p>
           </div>
           {{/each_place_item }}
+-->
+        <div class="place-time place-item-description">
+<!--          <span class="place-item place-label-description">Description</span> -->
+          <p class="place-value plcae-value-description">{{ description }}</p>
+        </div>
         </section>
 
         {{#if survey_config}}
