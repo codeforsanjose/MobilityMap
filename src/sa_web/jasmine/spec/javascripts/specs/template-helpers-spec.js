@@ -15,6 +15,7 @@ describe('template-helpers.js', function() {
       expect(configItems[0].is_input).toBe(false);
       expect(configItems[0].is_textarea).toBe(true);
       expect(configItems[0].is_select).toBe(false);
+      expect(configItems[0].is_icon_select).toBe(false);
     });
 
     it('should handle select type', function() {
@@ -24,6 +25,7 @@ describe('template-helpers.js', function() {
       expect(configItems[0].is_input).toBe(false);
       expect(configItems[0].is_textarea).toBe(false);
       expect(configItems[0].is_select).toBe(true);
+      expect(configItems[0].is_icon_select).toBe(false);
     });
 
     it('should handle text type', function() {
@@ -33,6 +35,7 @@ describe('template-helpers.js', function() {
       expect(configItems[0].is_input).toBe(true);
       expect(configItems[0].is_textarea).toBe(false);
       expect(configItems[0].is_select).toBe(false);
+      expect(configItems[0].is_icon_select).toBe(false);
     });
 
     it('should handle hidden type', function() {
@@ -42,6 +45,7 @@ describe('template-helpers.js', function() {
       expect(configItems[0].is_input).toBe(true);
       expect(configItems[0].is_textarea).toBe(false);
       expect(configItems[0].is_select).toBe(false);
+      expect(configItems[0].is_icon_select).toBe(false);
     });
 
     it('should handle number type', function() {
@@ -51,7 +55,20 @@ describe('template-helpers.js', function() {
       expect(configItems[0].is_input).toBe(true);
       expect(configItems[0].is_textarea).toBe(false);
       expect(configItems[0].is_select).toBe(false);
+      expect(configItems[0].is_icon_select).toBe(false);
     });
+
+    it('should handle icon select type', function() {
+      var configItems = getConfigItems('icon_select');
+
+      Shareabouts.TemplateHelpers.insertInputTypeFlags(configItems);
+      expect(configItems[0].is_input).toBe(false);
+      expect(configItems[0].is_textarea).toBe(false);
+      expect(configItems[0].is_select).toBe(false);
+      expect(configItems[0].is_icon_select).toBe(true);
+    });
+ 
+
   });
 
 
