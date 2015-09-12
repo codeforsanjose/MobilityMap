@@ -24,6 +24,15 @@ log = logging.getLogger(__name__)
 
 
 def make_api_root(dataset_root):
+    if settings.SHAREABOUTS['API_ROOT']:
+      return settings.SHAREABOUTS['API_ROOT']
+    # The following code doesn't work how it's supposed to,
+    #  not unless it is reaching into the localhost for 
+    #  the API_ROOT because it assumes that DATASET_ROOT is 
+    #  not a full url, but rather just a uri so the resulting
+    #  code if it is passed a full URL is just the http header
+    #  "http:/". Weird, right? They probably never tried having
+    #  the api server separate from the app server...
     components = dataset_root.split('/')
     if dataset_root.endswith('/'):
         return '/'.join(components[:-4]) + '/'
