@@ -630,7 +630,7 @@ place:
           value: _(Hint Name)
         - key: size
           value: 30
-    - prompt: _(Hint Type)
+    - prompt: _(Vehicle)
       type: icon_select
       options:
         - label: _(Bicycle)
@@ -649,10 +649,10 @@ place:
           value: airplane
         - label: _(Truck)
           value: truck
-      name: hint_type
+      name: location_type
       attrs:
         - key: required
-    - prompt: _(Hint Category)
+    - prompt: _(Issue)
       type: icon_select
       options:
         - label: _(Hazard)

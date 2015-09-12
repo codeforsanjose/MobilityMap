@@ -29,12 +29,14 @@ var Shareabouts = Shareabouts || {};
         var locationType = attrs.location_type,
             locationTypes = _.map(S.Config.placeTypes, function(config, key){ return key; });
 
+        console.log('ATTRS: '+attrs)
+
         if (!_.contains(locationTypes, locationType)) {
           console.warn(locationType + ' is not supported.');
           return locationType + ' is not supported.';
         }
       };
-
+      
       // Global route changes
       this.bind('route', function(route, router) {
         S.Util.log('ROUTE', self.getCurrentPath());

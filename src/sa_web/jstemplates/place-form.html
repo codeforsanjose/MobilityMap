@@ -63,12 +63,24 @@
                 {{#select_item_value ../.. name}}
                 {{# options }}
                   {{#if label}}
-                  <img src='/static/img/{{ label }}.png'>
-                  <input id="place-{{ label }}" name="{{ label }}" type='checkbox' value='{{ label }}' class='icon_select' />
+                  <img src='/static/img/{{ label }}.png' class='icon_select_img' id='place-{{ label }}' title="{{ label }}">
+<!--                  <input id="place-{{ label }}" name="{{ label }}" type='checkbox' value='{{ label }}' style='display:none'/> -->
                   {{/if}}
                 {{/ options }}
                 {{/select_item_value}}
               </div>
+              <select id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+                {{#select_item_value ../.. name}}
+                {{# options }}
+                  {{#if label}}
+                  <option value="{{value}}" id="place-{{ label }}">{{label}}</option>
+                  {{else}}
+                  <option value="{{.}}" id="place-{{.}}">{{.}}</option>
+                  {{/if}}
+                {{/ options }}
+                {{/select_item_value}}
+              </select>
+ 
               {{/is_icon_select}}
 
               {{#is_file}}
@@ -103,3 +115,5 @@
           <div class="form-spinner"></div>
 
         </form>
+
+  <script src="{{STATIC_URL}}js/icon_select.js"></script>
