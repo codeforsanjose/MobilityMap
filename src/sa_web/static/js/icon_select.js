@@ -1,63 +1,44 @@
 
 // functions to simplify the code
+var icon_selected_class = 'icon_selected';
+
 function return_option(img){
-  var id = $(img).attr('id')
+  var id = $(img).attr('id');
   return 'select option#'+id;
 }
-function select_option(img){
-  
-//  $(return_checkbox(img)).click();
-}
-function unselect(img){
-  var option_selector = return_option(img);
-  if ($(option_selector).is(':selected')){
-    console.log(option_selector+' de-selected');
-    $(img).css('border','1px solid white');
-  }
 
-//  if ($(checkbox).is(':checked')){
-//    click_checkbox(img);
-//    $(img).css('border','1px solid white');
-//  }
-}
-function select(img){
+function icon_select(img){
   var option_selector = return_option(img);
-  if (!$(option_selector).is(':selected')){
-    $(option_selector).attr('selected','selected');
-    console.log(option_selector+' selected');
-    $(img).css('border','1px solid black');
-  }
-//  if (!$(checkbox).is(':checked')){
-//    click_checkbox(img);
-//    $(img).css('border','1px solid black');
-//  }
+  $(img).addClass(icon_selected_class);
+  $(option_selector).attr('selected','selected');
+}
+
+function icon_deselect(img){
+  var option_selector = return_option(img);
+  $(img).removeClass(icon_selected_class);
+  $(option_selector).attr('selected','');
+}
+
+function apply_selected_img(){
+  $('.icon_select_img').each(function(){
+    var option_selector = return_option(this);
+    if ($(option_selector).is(':selected')){
+      icon_select(this);
+    }  
+  });
 }
 
 $('document').ready(function(){
-  console.log('icon_select is here!');
+  // apply selected img format on load
+  apply_selected_img();
+
   $('.icon_select_img').click(function(){
     var option_selector = return_option(this);
-  
     if (!$(this).hasClass('icon_selected')){
       $(this).parent().children('.icon_selected').each(function(){
-        $(this).removeClass('icon_selected');
-      $(option_selector).attr('selected','');
-      })
-      $(this).addClass('icon_selected');
-      $(option_selector).attr('selected','selected');
+        icon_deselect(this);
+      });
+      icon_select(this);
     }
-  
-    // unclick all other images
-/*
-    $(this).parent().children('.icon_select').each(function(){
-      unselect(this);
-    })
-
-    if ($(option_selector).is(':selected')){
-      unselect(this);
-    } else {
-      select(this);
-    }
-*/
-  })
-})
+  });
+});

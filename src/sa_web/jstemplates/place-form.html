@@ -69,7 +69,7 @@
                 {{/ options }}
                 {{/select_item_value}}
               </div>
-              <select id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}}>
+              <select id="place-{{ name }}" name="{{ name }}" type="{{ type }}" {{#attrs}} {{ key }}="{{ value }}"{{/attrs}} style="display:none;">
                 {{#select_item_value ../.. name}}
                 {{# options }}
                   {{#if label}}
