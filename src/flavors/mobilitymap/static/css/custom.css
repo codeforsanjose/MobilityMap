@@ -67,6 +67,11 @@ input.geocode-address-bar {
 }
 
 
+/* =Hint Display
+-------------------------------------------------------------- */
+.place-item.place-label-description {
+  font-style: italic;
+}
 /* =Icon Select
 -------------------------------------------------------------- */
 .icon_select_img {
@@ -76,4 +81,12 @@ input.geocode-address-bar {
 }
 .icon_select_img.icon_selected {
   border:1px solid black;
+}
+
+.icon_small {
+  border:1px solid black;
+  border-radius: 10px;
+  padding:2px;
+  width:40px;
+  height:40px;
 }

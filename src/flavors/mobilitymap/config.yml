@@ -354,19 +354,19 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/img/bicycle.png
+          iconSize: [40, 40]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/bicycle.png
+          iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [5,30]
 
   pedestrian:
     label: _(Pedestrian)
@@ -383,19 +383,19 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/img/pedestrian.png
+          iconSize: [40, 40]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "pedestrian" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/pedestrian.png
+          iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [5,30]
 
   rail:
     label: _(Rail)
@@ -415,99 +415,26 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "rail" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/img/rail.png
+          iconSize: [40, 40]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "rail" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/rail.png
+          iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [5,30]
 
   bus:
     label: _(Bus)
-    rules:
-      - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-
-  car:
-    label: _(Car)
-    rules:
-      - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-        style:
-          color: '#0d85e9'
-          radius: 3
-          weight: 1
-          opacity: 0.9
-          fillOpacity: 1
-
-      - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
-          iconAnchor: [9, 9]
-
-      - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
-        # Display landmarks as icons when zoomed in
-
-        icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
-          shadowSize: [41, 41]
-          iconAnchor: [12, 41]
-
-  motorcycle:
-    label: _(Motorcycle)
     rules:
       - condition: '"{{location_type}}" === "bus" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
@@ -528,24 +455,95 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/img/bus.png
+          iconSize: [40, 40]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "bus" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/bus.png
+          iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [5,30]
+
+  car:
+    label: _(Car)
+    rules:
+      - condition: '"{{location_type}}" === "car" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "car" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/img/car.png
+          iconSize: [40, 40]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "car" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/car.png
+          iconSize: [50, 50]
+          shadowSize: [41, 41]
+          iconAnchor: [5,30]
+
+  motorcycle:
+    label: _(Motorcycle)
+    rules:
+      - condition: '"{{location_type}}" === "motorcycle" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+        style:
+          color: '#0d85e9'
+          radius: 3
+          weight: 1
+          opacity: 0.9
+          fillOpacity: 1
+
+      - condition: '"{{location_type}}" === "motorcycle" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+        # Display landmarks as icons when zoomed in
+
+        icon:
+          iconUrl: /static/img/motorcycle.png
+          iconSize: [40, 40]
+          iconAnchor: [9, 9]
+
+      - condition: '"{{location_type}}" === "motorcycle" && {{layer.focused}} === true'
+        # Display landmarks as icons when zoomed in
+        icon:
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/motorcycle.png
+          iconSize: [50, 50]
+          shadowSize: [41, 41]
+          iconAnchor: [5,30]
 
   airplane:
     label: _(Airplane)
     rules:
-      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} < 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "airplane" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
           color: '#0d85e9'
           radius: 3
@@ -560,23 +558,23 @@ place_types:
           opacity: 0.9
           fillOpacity: 1
 
-      - condition: '"{{location_type}}" === "highway" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
+      - condition: '"{{location_type}}" === "airplane" && {{map.zoom}} >= 13 && {{layer.focused}} === false'
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
-          iconSize: [17, 18]
+          iconUrl: /static/img/airplane.png
+          iconSize: [40, 40]
           iconAnchor: [9, 9]
 
-      - condition: '"{{location_type}}" === "highway" && {{layer.focused}} === true'
+      - condition: '"{{location_type}}" === "airplane" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
-
+        
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
-          shadowUrl: /static/css/images/marker-shadow.png
-          iconSize: [25, 41]
+          iconUrl: /static/css/images/marker-pointer.png
+          shadowUrl: /static/img/airplane.png
+          iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [12, 41]
+          iconAnchor: [5,30]
 
         # Display landmarks as circles (vectors) when zoomed out
 
