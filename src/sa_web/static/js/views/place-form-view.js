@@ -105,6 +105,7 @@ var Shareabouts = Shareabouts || {};
       // Make sure that the center point has been set after the form was
       // rendered. If not, this is a good indication that the user neglected
       // to move the map to set it in the correct location.
+/*
       if (!this.center) {
         this.$('.drag-marker-instructions').addClass('is-visuallyhidden');
         this.$('.drag-marker-warning').removeClass('is-visuallyhidden');
@@ -115,7 +116,7 @@ var Shareabouts = Shareabouts || {};
         window.scrollTo(0, 0);
         return;
       }
-
+*/
       var router = this.options.router,
           model = this.model,
           // Should not include any files

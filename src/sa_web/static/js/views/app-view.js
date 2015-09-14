@@ -298,6 +298,8 @@ var Shareabouts = Shareabouts || {};
 
       // Never set the placeFormView's latLng until the user does it with a
       // drag event (below)
+      // Mobility Map: Incredibly inconvenient, so no. Reworked so that
+      // we can create a place without dragging.
       if (this.placeFormView && this.placeFormView.center) {
         this.setPlaceFormViewLatLng(ll);
       }
