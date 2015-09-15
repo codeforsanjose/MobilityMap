@@ -22,7 +22,6 @@ var Shareabouts = Shareabouts || {};
     },
     initialize: function() {
       var supportType = S.Config.support.submission_type;
-
       this.model.submissionSets[supportType] = this.model.submissionSets[supportType] ||
         new S.SubmissionCollection(null, {
           submissionType: supportType,
@@ -56,24 +55,31 @@ var Shareabouts = Shareabouts || {};
       allSorts: '.list-sort-menu a',
       date: '.date-sort',
       surveyCount: '.survey-sort',
-      supportCount: '.support-sort'
+      supportCount: '.support-sort',
+      searchFilter: '#list-search-filter',
+      iconSelectImg: '.icon_selectable'
     },
     events: {
       'input @ui.searchField': 'handleSearchInput',
+      'click @ui.searchFilter': 'handleSearchInput',
       'submit @ui.searchForm': 'handleSearchSubmit',
       'click @ui.date': 'handleDateSort',
       'click @ui.surveyCount': 'handleSurveyCountSort',
-      'click @ui.supportCount': 'handleSupportCountSort'
+      'click @ui.supportCount': 'handleSupportCountSort',
+      'click @ui.iconSelectImg': 'handleIconSelectImage'
     },
     initialize: function(options) {
+      for (o in options){
+        console.log(' - '+options[o]);
+      }
       options = options || {};
-
+      
       // Init the views cache
       this.views = {};
 
       // Set the default sort
       this.sortBy = 'date';
-
+     
       // Initialize the list filter
       this.collectionFilters = options.filter || {};
       this.searchTerm = options.term || '';
@@ -95,8 +101,70 @@ var Shareabouts = Shareabouts || {};
       }, this);
     },
     handleSearchInput: function(evt) {
+      var filters = {}
+      var filter_values = this.ui.searchFilter.val().split(',');
+      if (filter_values[0] === '') {
+        filter_values = [];
+      }
+      
+      // loop through filter values and setup filters...
+      for (var i in filter_values) {
+        var item = filter_values[i].split('|');
+        if (['location_type','hint_category'].indexOf(item[0]) !== -1) {
+          if (Array.isArray(filters[item[0]])) {
+            filters[item[0]].push(item[1]);
+          } else {
+            filters[item[0]] = [item[1]];
+          }
+        } else {
+          filters[item[0]] = item[1]; 
+        }
+      }
       evt.preventDefault();
       this.search(this.ui.searchField.val());
+      this.filter(filters);
+//      this.filter({'location_type':['bus','bicycle']})
+    },
+    handleIconSelectImage: function(evt) {
+      evt.preventDefault();
+      var icon = evt['toElement'],
+          id = $(icon).attr('id');
+      var types = id.split('-');
+      var parse_str = types[0]+'|'+types[1];
+      var val =  this.ui.searchFilter.val().split(',');
+      // reset val to empty array because javascript
+      if (val[0] === '') {
+        val = [];
+      }
+      // if the icon is selected, lets remove it
+      // and its selected class
+      if ($(icon).hasClass('icon_selected')) {
+        $(icon).removeClass('icon_selected');
+        var index = val.indexOf(parse_str);
+        if (index !== -1) {
+          val.splice(index,1);
+        }
+        // remove it from collection filters too!
+        var index = this.collectionFilters[types[0]].indexOf(types[1]);
+        if (index !== -1) {
+          this.collectionFilters[types[0]].splice(index,1);
+          // delete the entry entirely if empty
+          if (this.collectionFilters[types[0]].length === 0) {
+            delete this.collectionFilters[types[0]];
+          }
+        }
+      // now we're going to add it...
+      } else {
+        $(icon).addClass('icon_selected');
+        var index = val.indexOf(parse_str);
+        if (index === -1) {
+          val.push(parse_str);
+        }
+      }
+      // update the filter field
+      this.ui.searchFilter.val(val);
+      // click it too
+      this.ui.searchFilter.click();
     },
     handleSearchSubmit: function(evt) {
       evt.preventDefault();
@@ -187,6 +255,9 @@ var Shareabouts = Shareabouts || {};
     },
     filter: function(filters) {
       _.extend(this.collectionFilters, filters);
+      for (f in this.collectionFilters) {
+        console.log(f+': '+this.collectionFilters[f]);
+      }
       this.applyFilters(this.collectionFilters, this.searchTerm);
     },
     search: function(term) {
@@ -203,11 +274,33 @@ var Shareabouts = Shareabouts || {};
             hide = function() { model.trigger('hide'); },
             submitter, locationType;
 
+        //filters['location_type'] = 'bicycle';
+  
         // If the model doesn't match one of the filters, hide it.
         for (key in filters) {
-          val = filters[key].toUpperCase();
-          if (val !== model.get(key).toUpperCase()) {
-            return hide();
+          if (['location_type','hint_category'].indexOf(key) !== -1) {
+            //special condition for location_type
+            var values = filters[key];
+            if (!Array.isArray(values)) {
+              values = [values]; 
+            }
+            var hit = false;
+            for (var v in values) {
+              var val = values[v].toUpperCase();
+              if (val == model.get(key).toUpperCase()) {
+                hit = true;
+                break;
+              }
+            }
+            if (hit === false) {
+              return hide();
+            }
+          } else {
+            if (filters[key] === undefined) continue;
+            val = filters[key].toUpperCase();
+            if (val !== model.get(key).toUpperCase()) {
+              return hide();
+            }
           }
         }
 
