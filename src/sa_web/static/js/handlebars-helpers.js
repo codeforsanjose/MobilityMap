@@ -115,6 +115,38 @@ var Shareabouts = Shareabouts || {};
   Handlebars.registerHelper('support_label_plural', function() {
     return NS.Config.support.response_plural_name;
   });
+  Handlebars.registerHelper('hint_vehicle_list', function() {
+    // this is lazy and needs to be cleaned up!!!!!!
+    var vehicles = ['bicycle','pedestrian','rail','bus','car','motorcycle','airplane','truck'],
+        result = '';
+    
+    for (i in vehicles) {
+      var v = vehicles[i];
+      result += '<img src="/static/img/'+v
+             +'.png" class="icon_select_img icon_selectable icon_small" '
+             +'id="location_type-'+v
+             +'" title="'+v+'">';
+    }
+
+    return result;
+  });
+
+  Handlebars.registerHelper('hint_category_list', function() {
+    // this is lazy and needs to be cleaned up!!!!!!
+    var vehicles = ['hazard','idea','construction','accessibility'],
+        result = '';
+    
+    for (i in vehicles) {
+      var v = vehicles[i];
+      result += '<img src="/static/img/'+v
+             +'.png" class="icon_select_img icon_selectable icon_small" '
+             +'id="hint_category-'+v
+             +'" title="'+v+'">';
+    }
+
+    return result;
+  });
+
 
 
   Handlebars.registerHelper('survey_count', function() {

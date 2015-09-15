@@ -2,7 +2,24 @@
   <form class="list-search-form">
     <input id="list-search" name="list_search" type="text" placeholder="Search...">
     <input name="search" type="submit" value="Search" class="btn btn-primary submit-btn">
-  </form>
+    <input id="list-search-filter" name="list_search_filter" type="text">
+ </form>
+<br/>
+<br/>
+<br/>
+ <div style='float:left;'>
+    <label for='hint-icons'>Vehicle Filter</label>
+    <div id="hint-icons" name="hint-icons-location" type="hint-icons">
+    {{#hint_vehicle_list}}
+    {{/hint_vehicle_list}}
+    </div>
+    <br/>
+    <label for='hint-icons'>Category Filter</label>
+    <div id="hint-icons" name="hint-icons-category" type="hint-icons">
+    {{#hint_category_list}}
+    {{/hint_category_list}}
+    </div>
+ </div>
   <nav class="list-sort-menu"><span class="list-sort-prompt"></span> <a href="#" class="date-sort is-selected">{{#_}}Most Recent{{/_}}</a> | <a href="#" class="support-sort">{{#_}}Most {{ support_label_plural }}{{/_}}</a> | <a href="#" class="survey-sort">{{#_}}Most {{ survey_label_plural }}{{/_}}</a></nav>
 </div>
 
