@@ -69,9 +69,6 @@ var Shareabouts = Shareabouts || {};
       'click @ui.iconSelectImg': 'handleIconSelectImage'
     },
     initialize: function(options) {
-      for (o in options){
-        console.log(' - '+options[o]);
-      }
       options = options || {};
       
       // Init the views cache
@@ -101,7 +98,7 @@ var Shareabouts = Shareabouts || {};
       }, this);
     },
     handleSearchInput: function(evt) {
-      var filters = {}
+      var filters = {};
       var filter_values = this.ui.searchFilter.val().split(',');
       if (filter_values[0] === '') {
         filter_values = [];
@@ -255,9 +252,6 @@ var Shareabouts = Shareabouts || {};
     },
     filter: function(filters) {
       _.extend(this.collectionFilters, filters);
-      for (f in this.collectionFilters) {
-        console.log(f+': '+this.collectionFilters[f]);
-      }
       this.applyFilters(this.collectionFilters, this.searchTerm);
     },
     search: function(term) {
