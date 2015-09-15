@@ -355,7 +355,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/bicycle.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
@@ -384,7 +384,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/pedestrian.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "pedestrian" && {{layer.focused}} === true'
@@ -420,7 +420,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/rail.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "rail" && {{layer.focused}} === true'
@@ -456,7 +456,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/bus.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "bus" && {{layer.focused}} === true'
@@ -492,7 +492,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/car.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "car" && {{layer.focused}} === true'
@@ -528,7 +528,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/motorcycle.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "motorcycle" && {{layer.focused}} === true'
@@ -563,7 +563,7 @@ place_types:
 
         icon:
           iconUrl: /static/img/airplane.png
-          iconSize: [20, 20]
+          iconSize: [30, 30]
           iconAnchor: [9, 9]
 
       - condition: '"{{location_type}}" === "airplane" && {{layer.focused}} === true'
