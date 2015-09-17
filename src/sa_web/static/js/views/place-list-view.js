@@ -124,8 +124,8 @@ var Shareabouts = Shareabouts || {};
     },
     handleIconSelectImage: function(evt) {
       evt.preventDefault();
-      var icon = evt['toElement'],
-          id = $(icon).attr('id');
+      var icon = evt['target'];
+      var id = $(icon).attr('id');
       var types = id.split('-');
       var parse_str = types[0]+'|'+types[1];
       var val =  this.ui.searchFilter.val().split(',');
