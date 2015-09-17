@@ -55,14 +55,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bike_path" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -72,7 +72,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -80,7 +80,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -91,7 +91,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "side_walk" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -101,7 +101,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -109,7 +109,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -120,14 +120,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "trail" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -137,7 +137,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -145,7 +145,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -157,14 +157,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "train" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -174,7 +174,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -182,7 +182,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -193,14 +193,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "street" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -210,7 +210,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -218,7 +218,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -229,14 +229,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "highway" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -246,7 +246,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -254,7 +254,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -265,14 +265,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bridge" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -282,7 +282,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -290,7 +290,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -301,14 +301,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "parking" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -318,7 +318,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/dot-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
           iconAnchor: [9, 9]
 
@@ -326,7 +326,7 @@ place_types:
         # Display landmarks as icons when zoomed in
 
         icon:
-          iconUrl: /static/css/images/markers/marker-0d85e9.png
+          iconUrl: /static/css/images/mobilitymaplogo.png
           shadowUrl: /static/css/images/marker-shadow.png
           iconSize: [25, 41]
           shadowSize: [41, 41]
@@ -337,14 +337,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bicycle" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -373,7 +373,7 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "pedestrian" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -402,14 +402,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "rail" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -438,14 +438,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "bus" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -474,14 +474,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "car" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -510,14 +510,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "motorcycle" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
@@ -545,14 +545,14 @@ place_types:
     rules:
       - condition: '"{{location_type}}" === "airplane" && {{map.zoom}} < 13 && {{layer.focused}} === false'
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
           fillOpacity: 1
 
         style:
-          color: '#0d85e9'
+          color: '#883E4F'
           radius: 3
           weight: 1
           opacity: 0.9
