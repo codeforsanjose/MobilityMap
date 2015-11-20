@@ -366,7 +366,7 @@ place_types:
           shadowUrl: /static/img/bicycle.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   pedestrian:
     label: _(Pedestrian)
@@ -395,7 +395,7 @@ place_types:
           shadowUrl: /static/img/pedestrian.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   rail:
     label: _(Rail)
@@ -431,7 +431,7 @@ place_types:
           shadowUrl: /static/img/rail.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   bus:
     label: _(Bus)
@@ -467,7 +467,7 @@ place_types:
           shadowUrl: /static/img/bus.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   car:
     label: _(Car)
@@ -503,7 +503,7 @@ place_types:
           shadowUrl: /static/img/car.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   motorcycle:
     label: _(Motorcycle)
@@ -538,7 +538,7 @@ place_types:
           shadowUrl: /static/img/motorcycle.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
   airplane:
     label: _(Airplane)
@@ -574,7 +574,7 @@ place_types:
           shadowUrl: /static/img/airplane.png
           iconSize: [50, 50]
           shadowSize: [41, 41]
-          iconAnchor: [5,30]
+          iconAnchor: [15,50]
 
         # Display landmarks as circles (vectors) when zoomed out
 
