@@ -74,7 +74,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -103,7 +103,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "side_walk" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -139,7 +139,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -176,7 +176,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bike_path" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -212,7 +212,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "street" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -248,7 +248,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "highway" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -284,7 +284,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bridge" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -320,7 +320,7 @@ place_types:
         icon:
           iconUrl: /static/css/images/mobilitymaplogo.png
           iconSize: [17, 18]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "parking" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -356,7 +356,7 @@ place_types:
         icon:
           iconUrl: /static/img/bicycle.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bicycle" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -385,7 +385,7 @@ place_types:
         icon:
           iconUrl: /static/img/pedestrian.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "pedestrian" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -421,7 +421,7 @@ place_types:
         icon:
           iconUrl: /static/img/rail.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "rail" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -457,7 +457,7 @@ place_types:
         icon:
           iconUrl: /static/img/bus.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "bus" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -493,7 +493,7 @@ place_types:
         icon:
           iconUrl: /static/img/car.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "car" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -529,7 +529,7 @@ place_types:
         icon:
           iconUrl: /static/img/motorcycle.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "motorcycle" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
@@ -564,7 +564,7 @@ place_types:
         icon:
           iconUrl: /static/img/airplane.png
           iconSize: [30, 30]
-          iconAnchor: [9, 9]
+          iconAnchor: [15, 15]
 
       - condition: '"{{location_type}}" === "airplane" && {{layer.focused}} === true'
         # Display landmarks as icons when zoomed in
